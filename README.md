@@ -12,28 +12,28 @@ Scipy
 To run PARL, 8 files are required: 
 
 1.**Training Rating records: file_name=TrainInteraction.out**  
-each training sample is a sequence as:
-UserId\tItemId\tRating\tDate
-Example: 0\t3\t5.0\t1393545600
+each training sample is a sequence as:  
+UserId\tItemId\tRating\tDate  
+Example: 0\t3\t5.0\t1393545600  
 
 2.**Validate Rating records: file_name=ValidateInteraction.out**  
-The format is the same as the training data format.
+The format is the same as the training data format.  
 
 3.**Testing Rating records: file_name=TestInteraction.out**  
-The format is the same as the training data format.
+The format is the same as the training data format.  
 
 4.**Word2Id diction: file_name=WordDict.out**  
-Each line follows the format as:
-Word\tWord_Id
-Example: love\t0
+Each line follows the format as:  
+Word\tWord_Id  
+Example: love\t0  
 
 5.**User Review Document: file_name=UserReviews.out**  
-each line is the format as:
-UserId\tWord1_id Word2_id Word3_id …
-Example:0\tI love to eat hamburger …
+each line is the format as:  
+UserId\tWord1_id Word2_id Word3_id …  
+Example:0\tI love to eat hamburger …  
 
 6.**Item Review Document: file_name=ItemReviews.out**  
-The format is the same as the user review doc format.
+The format is the same as the user review doc format.  
 
 7.**User Auxiliary Review Document: file_name=UserAuxiliaryReviews.out**  
 The format is the same as the user review doc format.  
