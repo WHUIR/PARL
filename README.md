@@ -12,7 +12,6 @@ Scipy
 To run PARL, 8 files are required: 
 
 1.**Training Rating records: file_name=TrainInteraction.out
-
 each training sample is a sequence as:
 UserId\tItemId\tRating\tDate
 Example: 0\t3\t5.0\t1393545600
