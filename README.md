@@ -9,7 +9,7 @@ Numpy
 Scipy
 
 ## Data Preparation
-To run PARL, 8 files are required: 
+To run PARL, 7 files are required: 
 
 1.**Training Rating records: file_name=TrainInteraction.out**  
 each training sample is a sequence as:  
