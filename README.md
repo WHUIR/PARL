@@ -38,7 +38,7 @@ The format is the same as the user review doc format.
 7.**User Auxiliary Review Document: file_name=UserAuxiliaryReviews.out**  
 The format is the same as the user review doc format.  
 
-***Note that: all files need to be located in the same directory***
+### ***Note that: all files need to be located in the same directory***
 
 ## Configurations
 num_factor: the latent dimension of the representation learned from the review documents;
