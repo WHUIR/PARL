@@ -241,8 +241,9 @@ def train_model():
 
     v = tf.Variable(tf.truncated_normal([num_factor * 2, 100],stddev=0.3), name="v")
     J_2 = tf.reduce_sum(tf.reduce_sum(tf.multiply(tf.matmul(embeds_sum_1, embeds_sum_2),tf.matmul(v, v, transpose_b=True)), 2), 1, keep_dims=True)
-
-    predict_rating = (J_1 + 0.5 * J_2) + user_bs + item_bs
+    J_3 = tf.trace(tf.multiply(tf.matmul(embeds_sum_1, embeds_sum_2),
+                                 tf.matmul(v, v, transpose_b=True)))
+    predict_rating = (J_1 + 0.5 * (J_2 - J_3)) + user_bs + item_bs
     loss = tf.reduce_mean(tf.squared_difference(predict_rating, rates_inputs)) + gama * tf.nn.l2_loss(tf.subtract(user_embeds, user_aux_embeds))
     train_step = tf.train.RMSPropOptimizer(learn_rate).minimize(loss)
     init = tf.global_variables_initializer()
@@ -296,7 +297,7 @@ if __name__ == "__main__":
     word_embed_num_factor = 300
     learn_rate = 0.002
     batch_size = 200
-    epochs = 300
+    epochs = 200
     max_len = 300
     gama = 0.01
     drop_rate = 0.8
